@@ -1,39 +1,40 @@
+const printKelvin = (c) => {
+  console.log(c + 273.15);
+};
+
+const printFahrenheit = (c) => {
+  console.log(c * (9 / 5) + 32);
+};
+
+const printReamur = (c) => {
+  console.log(c * 4) / 5;
+};
+
+const conversionRegister = [printKelvin, printFahrenheit, printReamur];
+
 // Tanpa built-in functions
-function celciusToAll(c) {
+function celciusToAllWithout(c) {
   if (typeof c !== 'number') {
-    console.log('a number type needed');
+    console.log('A number type is needed');
     return;
   }
 
-  const getKelvin = (c) => {
-    return c + 273.15;
-  };
-
-  const getFahrenheit = (c) => {
-    return c * (9 / 5) + 32;
-  };
-
-  const getReamur = (c) => {
-    return (c * 4) / 5;
-  };
-
-  console.log(`Kelvin: ${getKelvin(c)}`);
-  console.log(`Fahrenheit: ${getFahrenheit(c)}`);
-  console.log(`Reamur: ${getReamur(c)}`);
+  for (let index = 0; index < conversionRegister.length; index++) {
+    const fn = conversionRegister[index];
+    fn(c);
+  }
 }
 
-// Dengan built-in
-function celciusToAllMany(a) {
-  if (!Array.isArray(a)) {
-    console.log('Array is needed');
+// Dengan built-in functions
+function celciusToAllWith(c) {
+  const numC = Number(c);
+
+  if (Number.isNaN(numC)) {
+    console.log('A number type or digit string is needed');
     return;
   }
-
-  a.forEach((c) => {
-    const celsius = Number(c);
-    celciusToAll(celsius);
-  });
+  conversionRegister.forEach((fn) => fn(numC));
 }
 
-celciusToAll(0);
-celciusToAllMany([0, 1, 2, -100, 100]);
+celciusToAllWithout(0);
+celciusToAllWith(0);
