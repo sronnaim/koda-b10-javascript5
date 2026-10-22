@@ -1,0 +1,18 @@
+{
+  "name": "js5",
+  "version": "1.0.0",
+  "description": "```mermaid flowchart TD     Start@{ shape: start }     Input@{ shape: lean-r, label: \"Derajat\" }     Kelvin@{ shape: rect, label: \"Kelvin = 273.15 + Derajat\" }     OutputKelvin@{ shape: lean-r, label: \"#quot;Kelvin: #quot;, Kelvin\"}     Fahrenheit@{ shape: rect, label: \"Fahrenheit = Derajat × (9/5) + 32\" }     OutputFahrenheit@{ shape: lean-r, label: \"#quot;Fahrenheit: #quot;, Fahrenheit\"}     Reamur@{ shape: rect, label: \"Reamur = Derajat × (4/5)\"}     OutputReamur@{ shape: lean-r, label: \"#quot;Reamur: #quot;, Reamur\"}     End@{ shape: stop }",
+  "homepage": "https://github.com/sronnaim/koda-b10-javascript5#readme",
+  "bugs": {
+    "url": "https://github.com/sronnaim/koda-b10-javascript5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sronnaim/koda-b10-javascript5.git"
+  },
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
