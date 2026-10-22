@@ -14,8 +14,8 @@ const conversionRegister = [printKelvin, printFahrenheit, printReamur];
 
 // Tanpa built-in functions
 function celciusToAllWithout(c) {
-  if (typeof c !== 'number') {
-    console.log('A number type is needed');
+  if (typeof c !== "number") {
+    console.log("A number type is needed");
     return;
   }
 
@@ -30,7 +30,7 @@ function celciusToAllWith(c) {
   const numC = Number(c);
 
   if (Number.isNaN(numC)) {
-    console.log('A number type or digit string is needed');
+    console.log("A number type or digit string is needed");
     return;
   }
   conversionRegister.forEach((fn) => fn(numC));
